@@ -5,30 +5,30 @@ Hash: SAMY
 
 <assetAccount
  version="1.0"
- type="issuer"
- accountID="f97d0939d762cfb4532a98bdb3864060c066e601418963fb0d2ed55c3a9843f3e66b91063d955ada2149ea7e3c6310d8cf58653be4868fb489b02595d9d25ecc"
+ type="simple"
+ accountID="28ec1d595e5bd6602df90648aee3b98a32336f31dfdbb44923c550efd4b96deb09b32e9f2eb69b4cb80fe96b1daa39902cf5a6e2689f7456e7f7f012cd693dd4"
  userID="7d1cff65a7febacaa0bbab73fd65032e6620e6501f41961b2be3ad556d891d4f5cab52acc87c07da91fbdc940da865249cb6e0b3a6fe7d66f6b3f8eb94591b5d"
  serverID="4cc4dd50cb6a7d9c7d05240e09daf2befcd189331d69a07f7dd11ed86967de12c9ffd4e3c2d70d0d7a02891e280f2df1fdf05543586840f2bf7b37d4299ad6de"
  assetTypeID="17dc81091d89e0754ce3e4612ae044b274cf251cac14641cc8c586b43d97138852858ee7713b26d3fe18da26035e7869b1adb6a86da6563b1b7ae61148e3453b" >
 
-<balance date="1294568614" amount="-999891"/>
+<balance date="1294628939" amount="9999901"/>
 
 </assetAccount>
 -----BEGIN ACCOUNT SIGNATURE-----
 Version: Open Transactions 0.42
 Comment: http://github.com/FellowTraveler/Open-Transactions/wiki
 
-Xbi0YZIUhja0G1rxqk0cuOlvon2492u5YFD0TG98sppc71Fr18jO3qFcyPY+xdfF
-65MkSC/CzbzQPt4JSe69eYPEPIOWoisqYOzUZ0efkcpKzzxAaacHUqObeluDch5C
-nqgL7TyRukssG9LN9x6WyzwbR1P+ZuL97Xvzk+DC0Qw=
+ELtZ1eHt3cU5GY4qWiqLX1HH1GyOezpgra231tTwCUUe2WhLNc6QwlJeQgulURfY
+OfXqmST2IB8EC/5QEIgtaeL97nhDP88QBPDJgdAhYklJWSgoDZcEtcPcKR7js0Xw
+z0WAJmKDnGBjK9vWe230LhE7yzEbw3WDidGI+w36RQQ=
 -----END ACCOUNT SIGNATURE-----
 
 -----BEGIN ACCOUNT SIGNATURE-----
 Version: Open Transactions 0.42
 Comment: http://github.com/FellowTraveler/Open-Transactions/wiki
 
-Ew9x0sbJDquvBAenl0eN+1Mf2ZMXYp9FWYCVQjI2+i+d0ljNXStXgOdb1PKFu1bF
-4Mb5CmhFPHgQdm0rMK8JCok1qN+nRwJdZSp7C2C7b0TbUSYkU6Br0O8ljQkEWL90
-N1yxZ9Ua8o1cUOhAzsrInXnUGs51R2bMvd7TSXBtEhQ=
+X0B5c0kJ8IQmEPgZ4UpDxZzxiIaZFFFyI68o4EaeyNagl3MgbueZdTKZI8rILoTf
++e7Kh6H8BZSoD1db7sEcwGzjJbkl9qQtCMoVrruU8bz7g48avEn882vcRYvtcXg/
+5v0NP3Naz8uWk4wPQWuLK+bNO6evUwpDYmUodtwESNY=
 -----END ACCOUNT SIGNATURE-----
 

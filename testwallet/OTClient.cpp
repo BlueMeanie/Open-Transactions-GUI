@@ -3632,6 +3632,11 @@ bool OTClient::ProcessUserCommand(OTClient::OT_CLIENT_CMD_TYPE requestedCommand,
 				bSendCommand = true;
 			}
 		}
+		else 
+		{
+			// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
+			theNym.AddTransactionNum(theNym, strServerID, lStoredTransactionNumber, true); // bSave=true
+		}		
 	} // else if (OTClient::notarizeCheque == requestedCommand) // DEPOSIT CHEQUE
 	
 	
@@ -3659,7 +3664,8 @@ bool OTClient::ProcessUserCommand(OTClient::OT_CLIENT_CMD_TYPE requestedCommand,
 				CONTRACT_ID.GetString(strContractID);
 			}
 		}
-		else {
+		else 
+		{
 			pAccount->GetIdentifier(strFromAcct);
 			pAccount->GetIdentifier(ACCOUNT_ID);
 			CONTRACT_ID = pAccount->GetAssetTypeID();
@@ -3814,6 +3820,11 @@ bool OTClient::ProcessUserCommand(OTClient::OT_CLIENT_CMD_TYPE requestedCommand,
 				theNym.AddTransactionNum(theNym, strServerID, lStoredTransactionNumber, true); // bSave=true
 			}
 
+		}
+		else if (bGotTransNum)
+		{
+			// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
+			theNym.AddTransactionNum(theNym, strServerID, lStoredTransactionNumber, true); // bSave=true
 		}
 		else 
 		{

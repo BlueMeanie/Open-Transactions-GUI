@@ -1,0 +1,39 @@
+-----BEGIN SIGNED CASH-----
+Hash: SAMY
+
+<?xml version="1.0"?>
+
+<token
+ version="1.0"
+ state="spendableToken"
+ denomination="25"
+ assetTypeID="17dc81091d89e0754ce3e4612ae044b274cf251cac14641cc8c586b43d97138852858ee7713b26d3fe18da26035e7869b1adb6a86da6563b1b7ae61148e3453b"
+ serverID="4cc4dd50cb6a7d9c7d05240e09daf2befcd189331d69a07f7dd11ed86967de12c9ffd4e3c2d70d0d7a02891e280f2df1fdf05543586840f2bf7b37d4299ad6de"
+ series="0"
+ validFrom="1294625214"
+ validTo="1310177214" >
+
+<tokenID>
+AAAAgMJn/fLy5i+O+8mtIoSoZipW5KgtqY+ASF1AOOcnHH3q8Q48AFvClAvXNfNb
+j9PMlM1w4JqXYbz60IzW0sDvNpFTnlOhgC6sc/08d91lDxlV1UkZpJX/1bVL32/F
+Rg5PywTvtBsG1aIPZkB+IjlhU6JZ7b1tgHoNOqjoADtEidgMb7z7jLNrJt5wKXC4
+4POG5hyHtW9fCP9/wBwkKHHG5ZuVl7pOo/2BLQ+Dl0K8rknXXjssfKMEYnDnhMsL
+hZTj4/4kCHm211yFZJNt6BFzEyoYfzcXQIrj/R4CQ8gHeShYt5M1h+ZLQ/3etRYS
+uIduVmprbrVlMgOlQ3r0Nz+zrt7QHEZfG7+sE3YblgbYJCrOdL0F/ZiXi/9LZTrB
+6bkB5nQzNCv7+nqq1IT5OpKXDr0GMp39QKdlMPoM5/CQlBhXnbECTUPUZeu+zeT5
+FVFKJgGN0NSHVRh+ozJUu5dV7CQCbQDvBfJAZ9Jo1VBNHSSb8VeRfh83qd3pcXCy
+VB3tkhV6R1Wj3MX/rrmgtfUVqcyKGVMfvNDvHtIouk4oM6Tl/2FuWb3X7QYXrdFT
+wE+SIoRTivKJJXa6lBXLTg9N2tsc4LDFQorwO9QiH89uzc8d/K7jQRij3LUIsM+q
+is9Arg==
+</tokenID>
+
+</token>
+-----BEGIN CASH SIGNATURE-----
+Version: Open Transactions 0.42
+Comment: http://github.com/FellowTraveler/Open-Transactions/wiki
+
+SHLC3EOYpgbTlZIlxBmfd7PoibzqO/C629j4v9vk7esyIsCiDDMyrqM/ZPJDExJg
+onX1o2wvZXIenMAg6ROh7ARuV50ItaOf4oOMHtWOeswicuWWu6HrrPfahWHPIQct
+gFnhGtrqJrzQ/DgA/8RAKaApN4BEwhO+FwnFOxSa9xM=
+-----END CASH SIGNATURE-----
+

@@ -1,4 +1,0 @@
-this is where the spent token databases go for each asset type.
-Each is stored by asset type and series. New mints come online
-before the previous ones expire.
-See OTMint and OTToken.

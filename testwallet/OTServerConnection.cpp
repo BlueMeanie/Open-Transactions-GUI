@@ -1510,21 +1510,49 @@ void OTServerConnection::ProcessMessageOut(char *buf, int * pnExpectReply)
 		// getTransactionNum
 		else if (buf[0] == 'n')
 		{
-			OTLog::Output(0, "(User has instructed to send a getTransactionNum command to the server...)\n");
+			// I just coded (here) for myself a secret option (for testing)...
+			// Optionally instead of JUST 'n', I can put n <number>, (without brackets) and
+			// this code will add that number to my list of issued and transaction numbers.
+			// I already have the ability to clear the list, so now I can add numbers to it as well.
+			// (Which adds to both lists.)
+			// I can also remove a number from the transaction list but LEAVE it on the issued list,
+			// for example by writing a cheque and throwing it away.
+			//
+			// This code is for testing and allows me to find and patch any problems without
+			// having to re-create my data each time -- speeds up debugging.
+			//
+			long lTransactionNumber = ((strlen(buf) > 2) ? atol(&(buf[2])) : 0);
 			
-			// ------------------------------------------------------------------------------			
-			// if successful setting up the command payload...
-			
-			if (m_pClient->ProcessUserCommand(OTClient::getTransactionNum, theMessage, 
-											*m_pNym,  *m_pServerContract,
-											NULL)) // NULL pAccount on this command.
+			if (lTransactionNumber > 0)
 			{
-				bSendCommand = true;
-				bSendPayload = true;				
+				OTString strServerID;
+				m_pServerContract->GetIdentifier(strServerID);
+
+				m_pNym->AddTransactionNum(*m_pNym, strServerID, lTransactionNumber, true); // bool bSave=true
+				
+				OTLog::vOutput(0, "Transaction number %ld added to both lists (on client side.)\n", 
+							  lTransactionNumber);
 			}
-			else
-				OTLog::vError("Error processing getTransactionNum command in ProcessMessage: %c\n", buf[0]);
-			// ------------------------------------------------------------------------
+			
+			else 
+			{
+				OTLog::Output(0, "(User has instructed to send a getTransactionNum command to the server...)\n");
+				
+				// ------------------------------------------------------------------------------			
+				// if successful setting up the command payload...
+				
+				if (m_pClient->ProcessUserCommand(OTClient::getTransactionNum, theMessage, 
+												*m_pNym,  *m_pServerContract,
+												NULL)) // NULL pAccount on this command.
+				{
+					bSendCommand = true;
+					bSendPayload = true;				
+				}
+				else
+					OTLog::vError("Error processing getTransactionNum command in ProcessMessage: %c\n", buf[0]);
+			}
+
+		// ------------------------------------------------------------------------
 		}
 		
 		else 

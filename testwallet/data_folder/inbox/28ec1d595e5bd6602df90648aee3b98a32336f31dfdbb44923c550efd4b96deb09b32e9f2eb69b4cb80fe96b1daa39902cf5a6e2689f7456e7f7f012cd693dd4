@@ -2,8 +2,8 @@
 Hash: SAMY
 
 <accountLedger version="1.0"
- type="nymbox"
- accountID="7d1cff65a7febacaa0bbab73fd65032e6620e6501f41961b2be3ad556d891d4f5cab52acc87c07da91fbdc940da865249cb6e0b3a6fe7d66f6b3f8eb94591b5d"
+ type="inbox"
+ accountID="28ec1d595e5bd6602df90648aee3b98a32336f31dfdbb44923c550efd4b96deb09b32e9f2eb69b4cb80fe96b1daa39902cf5a6e2689f7456e7f7f012cd693dd4"
  userID="7d1cff65a7febacaa0bbab73fd65032e6620e6501f41961b2be3ad556d891d4f5cab52acc87c07da91fbdc940da865249cb6e0b3a6fe7d66f6b3f8eb94591b5d"
 serverID="4cc4dd50cb6a7d9c7d05240e09daf2befcd189331d69a07f7dd11ed86967de12c9ffd4e3c2d70d0d7a02891e280f2df1fdf05543586840f2bf7b37d4299ad6de" >
 
@@ -12,8 +12,8 @@ serverID="4cc4dd50cb6a7d9c7d05240e09daf2befcd189331d69a07f7dd11ed86967de12c9ffd4
 Version: Open Transactions 0.42
 Comment: http://github.com/FellowTraveler/Open-Transactions/wiki
 
-kwm00BlHVzY0l2g0r2Is4c7L2UJpBAb1lO/YgcdVjukD6WxrvxyzdOR2Q+Ii//ri
-KE5jLX1a5L03vT2K4bcnrjCPfmoHw9+mUGKRbr3h8rpg8L12d4XX/hZl3lBQT6rK
-kq2Mn1w2rUSkwPpi1M/olatKqMQThMaVfCWBoG5zDJk=
+l1Brw72UtfmeUyqpKigNFqma8Sdz8NKWX1BjagsZs1h5v0TL2xNz9pw85iys605G
+4lXQTkj2bZ4b1S7SphPgcJvzdpNcFUmRXsFs1KkwShFXOYJlkGLTX4cvlUjWURRl
+Qs+haU5NC0ECpW7csfRIuz5FgiBy8WSLDTmN3MW2Lrs=
 -----END LEDGER SIGNATURE-----
 

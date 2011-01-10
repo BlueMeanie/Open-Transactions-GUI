@@ -3,6 +3,11 @@ NOTES on the Version:
 
 // ---------------------------------------------------------------------
 
+   0.43 --- BALANCE AGREEMENT / NO ACCOUNT HISTORY has been added!
+            Just make sure you grab the outbox and inbox, and the account
+            file, before doing a transaction, since they are needed
+            for balance agreement, which is now operational and required.
+
    0.42 --- More bug fixes, plus added OT_API_CreateNym() (finally).
 
    0.41 --- Bug fixes in support of API, added various transaction

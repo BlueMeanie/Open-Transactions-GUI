@@ -3409,8 +3409,12 @@ void OT_API::withdrawVoucher(OTIdentifier	& SERVER_ID,
 			// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
 			pNym->AddTransactionNum(*pNym, strServerID, lStoredTransactionNumber, true); // bSave=true								
 		}
-		
-		else if (bIssueCheque)
+		else if (!bIssueCheque)
+		{
+			// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
+			pNym->AddTransactionNum(*pNym, strServerID, lStoredTransactionNumber, true); // bSave=true								
+		}
+		else 
 		{
 			// Create a transaction
 			OTTransaction * pTransaction = OTTransaction::GenerateTransaction (USER_ID, ACCT_ID, SERVER_ID, 
@@ -3489,11 +3493,6 @@ void OT_API::withdrawVoucher(OTIdentifier	& SERVER_ID,
 			m_pClient->SetFocusToServerAndNym(*pServer, *pNym, &OT_XmlRpcCallback);
 #endif	
 			m_pClient->ProcessMessageOut(theMessage);	
-		}
-		else 
-		{
-			// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
-			pNym->AddTransactionNum(*pNym, strServerID, lStoredTransactionNumber, true); // bSave=true								
 		}
 	}
 	else 
@@ -3604,7 +3603,14 @@ void OT_API::depositCheque(OTIdentifier	& SERVER_ID,
 	{
 		OTLog::Output(0, "No Transaction Numbers were available. Try requesting the server for a new one.\n");
 	}
-	else if (theCheque.LoadContractFromString(THE_CHEQUE))
+	else if (!theCheque.LoadContractFromString(THE_CHEQUE))
+	{
+		OTLog::Output(0, "Unable to load cheque from string. Sorry.\n");
+		
+		// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
+		pNym->AddTransactionNum(*pNym, strServerID, lStoredTransactionNumber, true); // bSave=true								
+	}
+	else 
 	{
 		// Create a transaction
 		OTTransaction * pTransaction = OTTransaction::GenerateTransaction (USER_ID, ACCT_ID, SERVER_ID, 
@@ -3706,13 +3712,6 @@ void OT_API::depositCheque(OTIdentifier	& SERVER_ID,
 			m_pClient->ProcessMessageOut(theMessage);
 		}
 	} // bSuccess
-	else 
-	{
-		OTLog::Output(0, "Unable to load cheque from string. Sorry.\n");
-		
-		// IF FAILED, ADD TRANSACTION NUMBER BACK TO LIST OF AVAILABLE NUMBERS.
-		pNym->AddTransactionNum(*pNym, strServerID, lStoredTransactionNumber, true); // bSave=true								
-	}
 }
 
 
